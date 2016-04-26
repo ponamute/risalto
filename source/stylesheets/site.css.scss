@@ -8,6 +8,16 @@ body {
   font-size: 1em;
 }
 
+.logo {
+  margin: 60px 0;
+  
+  img {
+    height: auto;
+    width: auto;
+  }
+}
+
+
 .hero {
   background: url("../images/hero.jpg") no-repeat center center;
   background-size: cover;
@@ -19,12 +29,12 @@ body {
     top: 50%;
     transform: translateY(-50%);
   }
+
+  h1 {
+    margin-bottom: 100px;
+  }
 }
 
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
-}
 
 h1, h2, p {
   color: white;
