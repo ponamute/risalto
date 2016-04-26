@@ -8,6 +8,19 @@ body {
   font-size: 1em;
 }
 
+.hero {
+  background: url("../images/hero.jpg") no-repeat center center;
+  background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  .intro {
+    padding: 3rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
 .logo img {
   height: 18.75em;
   margin-top: 6em;
