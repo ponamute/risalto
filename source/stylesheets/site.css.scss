@@ -41,9 +41,14 @@ h1, h2, h3, h4, p {
 
 #summary {
   margin: 20px 0;
+
+  h4 {
+    margin-top: 40px;
+  }
 }
 
 form {
+
   h3 {
     margin: 0 0 10px 0;
   }

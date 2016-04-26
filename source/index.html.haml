@@ -7,13 +7,16 @@ title: Welcome to Risalto
       .logo
         = image_tag "logo.png"
       %h1 Best-in-class musculoskeletal outcomes faster and for less
-      %p.button.hollow
-        = link_to "Contact Us", "./contact"
+      .first 
+        %button.button.hollow{:onclick => "smoothScroll(document.getElementById('second'))", :type => "button"} Contact Us
+
+
 .row
   #summary
     .small-12.medium-8.large-6.medium-centered.columns
-      %h4
-        Risalto is building coordinated, high-performance ultra-narrow networks to achieve best in class outcomes in back pain at 30-50% savings.
+      #second.second
+        %h4
+          Risalto is building coordinated, high-performance ultra-narrow networks to achieve best in class outcomes in back pain at 30-50% savings.
 %form
   .row.display
     .small-12.medium-8.columns.medium-centered.small-centered
