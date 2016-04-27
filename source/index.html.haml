@@ -3,9 +3,6 @@ title: Welcome to Risalto
 ---
 %script{:src => "https://code.jquery.com/jquery-latest.min.js", :type => "text/javascript"}
 
-#callout.callout.success.hide
-  %p#input-feedback
-
 .section.hero
   .row
     .small-12.medium-8.large-6.medium-centered.columns
@@ -35,6 +32,9 @@ title: Welcome to Risalto
         %button#form-submit.button.expanded{:type => "submit"} SUBMIT
 
 %iframe#no-target{:name => "no-target", :src => "#", :style => "visibility:hidden"}
+
+#callout.callout.success.hide
+  %p#input-feedback
 
 :javascript
   $('#input-form').one('submit',function(){
