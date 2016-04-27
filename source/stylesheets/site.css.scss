@@ -43,6 +43,12 @@ h1, h2, h3, h4, p {
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     font-size: 1.1em;
   }
+
+  button {
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      font-size: 1.5em;
+    }
+  }
 }
 
 #summary {
