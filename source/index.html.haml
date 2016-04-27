@@ -1,6 +1,8 @@
 ---
 title: Welcome to Risalto
 ---
+%script{:src => "http://code.jquery.com/jquery-latest.min.js", :type => "text/javascript"}
+
 .section.hero
   .row
     .small-12.medium-8.large-6.medium-centered.columns
@@ -17,13 +19,47 @@ title: Welcome to Risalto
       #second.second
         %h4
           Risalto is building coordinated, high-performance ultra-narrow networks to achieve best in class outcomes in back pain at 30-50% savings.
-%form
+%form#input-form{:action => "", :method => "POST", :target => "no-target"}
   .row.display
     .small-12.medium-8.columns.medium-centered.small-centered
       %fieldset.fieldset
         %h3 Contact Us
-        %input{placeholder: "Name", type: "text"}
-        %input{placeholder: "Email", type: "text"}
-        %input{placeholder: "Subject", type: "text"}
-        %textarea{placeholder: "Message"}
-        %input.button.expanded{type: "submit"}
+        %input#name{name: "entry.2146164253", placeholder: "Name", type: "text"}
+        %input#email{name: "entry.910354329", placeholder: "Email", type: "text"}
+        %input#subject{name: "entry.1254965326", placeholder: "Subject", type: "text"}
+        %textarea#message{name: "entry.895363533", placeholder: "Message"}
+        %button#form-submit.button.expanded{:type => "submit"} SUBMIT
+
+%p#input-feedback
+
+%iframe#no-target{:name => "no-target", :src => "#", :style => "visibility:hidden"}
+
+:javascript
+  $('#input-form').one('submit',function(){
+      var inputName = encodeURIComponent($('#name').val());
+      var inputEmail = encodeURIComponent($('#email').val());
+      var inputSubject = encodeURIComponent($('#subject').val());
+      var inputMessage = encodeURIComponent($('#message').val());
+      var nameID = "entry.2146164253"
+      var emailID = "entry.910354329"
+      var subjectID = "entry.1254965326"
+      var messageID = "entry.895363533"
+      var baseURL = 'https://docs.google.com/forms/d/10r1hfTzLycUhI9UV8sYF1g2bGR-zYL_B0WVGaUyyjpw/formResponse?';
+      var submitRef = '&submit=submit';
+      var submitURL = (baseURL + nameID + "=" + inputName + "&" + emailID + "=" + inputEmail + "&" + subjectID + "=" + inputSubject + "&" + messageID + "=" + inputMessage + submitRef);
+      console.log(submitURL);
+      $(this)[0].action=submitURL;
+      $('#input-feedback').text('Thank You!');
+      $('#name').val('');
+      $('#email').val('');
+      $('#subject').val('');
+      $('#message').val('');
+  });
+
+
+
+/ name entry.2146164253
+/ email entry.910354329
+/ subject entry.1254965326
+/ message entry.895363533
+/ submit submit
