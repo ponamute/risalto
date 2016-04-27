@@ -3,6 +3,9 @@ title: Welcome to Risalto
 ---
 %script{:src => "https://code.jquery.com/jquery-latest.min.js", :type => "text/javascript"}
 
+#callout.callout.success.hide
+  %p#input-feedback
+
 .section.hero
   .row
     .small-12.medium-8.large-6.medium-centered.columns
@@ -19,6 +22,7 @@ title: Welcome to Risalto
       #second.second
         %h4
           Risalto is building coordinated, high-performance ultra-narrow networks to achieve best in class outcomes in back pain at 30-50% savings.
+
 %form#input-form{:action => "", :method => "POST", :target => "no-target"}
   .row.display
     .small-12.medium-8.columns.medium-centered.small-centered
@@ -29,8 +33,6 @@ title: Welcome to Risalto
         %input#subject{name: "entry.1254965326", placeholder: "Subject", type: "text"}
         %textarea#message{name: "entry.895363533", placeholder: "Message"}
         %button#form-submit.button.expanded{:type => "submit"} SUBMIT
-
-%p#input-feedback
 
 %iframe#no-target{:name => "no-target", :src => "#", :style => "visibility:hidden"}
 
@@ -49,17 +51,12 @@ title: Welcome to Risalto
       var submitURL = (baseURL + nameID + "=" + inputName + "&" + emailID + "=" + inputEmail + "&" + subjectID + "=" + inputSubject + "&" + messageID + "=" + inputMessage + submitRef);
       console.log(submitURL);
       $(this)[0].action=submitURL;
-      $('#input-feedback').text('Thank You!');
+      $('#callout').removeClass('hide')
+      $('#callout').addClass('show');
+      $('#input-feedback').text('Thanks for contacting us. We will get back to you shortly.');
       $('#name').val('');
       $('#email').val('');
       $('#subject').val('');
       $('#message').val('');
+      setTimeout(function() {$('#callout').fadeOut('slow');}, 4000);
   });
-
-
-
-/ name entry.2146164253
-/ email entry.910354329
-/ subject entry.1254965326
-/ message entry.895363533
-/ submit submit
