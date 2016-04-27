@@ -55,7 +55,7 @@ h1, h2, h3, h4, p {
   margin: 20px 0;
 
   h4 {
-    margin-top: 40px;
+/*    margin-top: 40px;*/
   }
 }
 
@@ -97,3 +97,6 @@ form {
   }
 }
 
+iframe {
+  height: 0;
+}
