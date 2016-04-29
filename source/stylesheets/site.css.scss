@@ -13,7 +13,7 @@ h1, h2, h3, h4, p {
 }
 
 .logo {
-  margin: 60px 0;
+  margin: 20px 0;
   
   img {
     height: auto;
@@ -28,23 +28,27 @@ h1, h2, h3, h4, p {
 
 
 .hero {
-  background: url("../images/hero.png") no-repeat 66% 34%;
+  background: url("../images/hero.png") no-repeat 68% 32%;
   background-size: cover;
-  height: 100vh;
 
   h1 {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     color: #4a4a4a;
   }
 
   @media screen and (max-width: 39.9375em) {
     font-size: 0.5em;
+    min-height: 460px;
   }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     font-size: 1.1em;
   }
 
+  min-height: 600px;
+
   button {
+    margin-bottom: 50px;
+
     @media screen and (min-width: 40em) and (max-width: 63.9375em) {
       font-size: 1.5em;
     }
@@ -53,10 +57,6 @@ h1, h2, h3, h4, p {
 
 #summary {
   margin: 20px 0;
-
-  h4 {
-/*    margin-top: 40px;*/
-  }
 }
 
 form {
