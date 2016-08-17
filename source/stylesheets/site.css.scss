@@ -2,37 +2,47 @@
 @import "normalize";
 
 body {
-  background: #4A4A4A;
-  text-align: center;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
-}
+  color: #4a4a4a;
 
-h1, h2, h3, h4, p {
-  color: white;
-}
-
-.logo {
-  margin: 20px 0;
-  
-  img {
-    height: auto;
-    width: auto;
-
-    @media screen and (max-width: 39.9375em) {
-      height: 50%;
-      width: 50%;
-    }
+  h1, h2 {
+    margin-bottom: 4.5rem;
   }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+  }
+}
+
+.row {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 
 .hero {
-  background: url("../images/hero.png") no-repeat 68% 32%;
+  background: url("../images/hero.jpg") no-repeat 68% 32%;
   background-size: cover;
 
+  .row {
+    padding-top: 2rem;
+  }
+
   h1 {
-    margin-bottom: 60px;
     color: #4a4a4a;
   }
 
@@ -44,59 +54,67 @@ h1, h2, h3, h4, p {
     font-size: 1.1em;
   }
 
-  height: 649px;
+  .logo {  
+    img {
 
-  button {
-    margin-bottom: 50px;
+      margin-bottom: 30px;
 
-    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-      font-size: 1.5em;
+      height: auto;
+      width: auto;
+
+      @media screen and (max-width: 39.9375em) {
+        height: 50%;
+        width: 50%;
+      }
     }
   }
+
+  height: 649px;
 }
 
-#summary {
-  margin: 20px 0;
+.broken {
+
+  h2 {
+    color: #00A5ED;
+  }
+
+  .row {
+    padding-bottom: 0;
+  }
+
+  .name {
+    font-weight: bold;
+  }
+
+  .disability {font-size: .75rem; color: gray;}
+  h3 {margin-top: 1.75rem; margin-bottom: 1.75rem;}
+  li {padding-top: .75rem;}
+  li.underline {
+    border-bottom: 1px solid #e1e1e1; 
+    padding-bottom: .75rem; 
+    margin-right: 12rem;
+  }
 }
 
-form {
-
-  h3 {
-    margin: 0 0 10px 0;
-  }
-
-  .button {
-    margin: 15px 0 0 0;
-  }
-
-  textarea {
-    height: 220px;
-    font-size: 1rem;
-  }
-}
-
-.fourofour {
-  margin-top: 100px;
-}
-
-#callout {
-  margin-bottom: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4rem;
-  z-index: 999;
-
-  @media screen and (max-width: 39.9375em) {
-    font-size: 0.8em;
-  }
+.how-it-works {
+  background-color: #0093D3;
+  color: white;
 
   p {
-    color: black;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }
 
-iframe {
-  height: 0;
+.contact {
+  font-size: 1.5rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: #f6f6f6;
+
+}
+
+.footer {
+  background-color: #004C6D;
+  color: white;
 }
