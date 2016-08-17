@@ -3,56 +3,54 @@ title: Welcome to Risalto
 ---
 %script{async: "", src: "https://code.jquery.com/jquery-latest.min.js", type: "text/javascript"}
 
-%section.hero
+.hero
   .row
     .small-10.medium-8.large-6.columns
       .logo
         = image_tag "logo.png"
       %h1 Best-in-class musculoskeletal outcomes faster and for less
-
-.row
-  #summary
-    .small-12.medium-8.large-6.medium-centered.columns
-      %h4
-        Risalto is building teams of the best providers all over the country to relieve back, joint, and musculoskeletal pain faster and for less.
-
-%form#input-form{action: "", method: "POST", target: "no-target"}
-  .row.display
-    .small-12.medium-8.columns.medium-centered.small-centered
-      %fieldset.fieldset
-        %h3 Contact Us
-        %input#name{name: "entry.2146164253", placeholder: "Name", type: "text"}
-        %input#email{name: "entry.910354329", placeholder: "Email", type: "text"}
-        %input#subject{name: "entry.1254965326", placeholder: "Subject", type: "text"}
-        %textarea#message{name: "entry.895363533", placeholder: "Message"}
-        %button#form-submit.button.expanded{:type => "submit"} SUBMIT
-
-%iframe#no-target{name: "no-target", src: "#", style: "visibility:hidden"}
-
-#callout.callout.success.hide
-  %p#input-feedback
-
-:javascript
-  $('#input-form').one('submit',function(){
-      var inputName = encodeURIComponent($('#name').val());
-      var inputEmail = encodeURIComponent($('#email').val());
-      var inputSubject = encodeURIComponent($('#subject').val());
-      var inputMessage = encodeURIComponent($('#message').val());
-      var nameID = "entry.2146164253"
-      var emailID = "entry.910354329"
-      var subjectID = "entry.1254965326"
-      var messageID = "entry.895363533"
-      var baseURL = 'https://docs.google.com/forms/d/10r1hfTzLycUhI9UV8sYF1g2bGR-zYL_B0WVGaUyyjpw/formResponse?';
-      var submitRef = '&submit=submit';
-      var submitURL = (baseURL + nameID + "=" + inputName + "&" + emailID + "=" + inputEmail + "&" + subjectID + "=" + inputSubject + "&" + messageID + "=" + inputMessage + submitRef);
-      console.log(submitURL);
-      $(this)[0].action=submitURL;
-      $('#callout').removeClass('hide')
-      $('#callout').addClass('show');
-      $('#input-feedback').text('Thanks for contacting us. We will reply shortly.');
-      $('#name').val('');
-      $('#email').val('');
-      $('#subject').val('');
-      $('#message').val('');
-      setTimeout(function() {$('#callout').fadeOut('slow');}, 4000);
-  });
+.broken
+  .row
+    .large-6.large-centered.small-left.text-center
+      %h2 How did we get here?
+    .large-6.columns
+      %h3 We're spending more and more on care, with worse results
+      %ul
+        %li.underline 30-50% of lumbar MRIs are unnecessary
+        %li.underline 5x increase in lumbar fusions (2000-2012)
+        %li 1/3 of knee replacements clinically inappropriate
+    .large-5.large-offset-1.columns.text-center
+      %ul
+        %li 
+          %span.name Larry P, 48 year old electrician
+        %li
+          %span.disability Long-term disability for past 5 years due to back pain
+      = image_tag "larry.jpg"
+.how-it-works
+  .row
+    .large-6.large-centered.small-left.text-center
+      %h2 
+        The 
+        %em Risalto 
+        Way Out
+    .large-4.text-center.columns
+      %h3 Find
+      %p We use advanced data mapping to find the best providers.
+    .large-4.text-center.columns
+      %h3 Connect
+      %p We match patients with providers to quickly meet their needs.
+    .large-4.text-center.columns
+      %h3 Guide
+      %p We educate and guide patients through their care journey.
+.contact
+  .row
+    .large-8.large-centered.text-center
+      %h3 Join us on the path to better, faster care
+      Contact us at 
+      %a{:href => "mailto:info@risaltohealth.com"} info@risaltohealth.com
+.footer
+  .row
+    .large-6
+      Copyright &copy; Risalto Health, Inc. 
+      = Time.now.strftime("%Y")
+      All rights reserverd.
