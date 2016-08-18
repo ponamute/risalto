@@ -3,14 +3,15 @@ title: Welcome to Risalto
 ---
 %script{async: "", src: "https://code.jquery.com/jquery-latest.min.js", type: "text/javascript"}
 
-.hero
+%section.hero
   .row
     .small-10.medium-8.large-6.columns
       %h1 Best-in-class musculoskeletal outcomes faster and for less
-.broken
+%section.broken#home-broken
   .row
     .large-6.large-centered.small-left.text-center
       %h2 How did we get here?
+  .row
     .large-6.small-12.columns
       %h3 We're spending more and more on care, with worse results
       %ul
@@ -24,13 +25,14 @@ title: Welcome to Risalto
         %li
           %span.disability Long-term disability for past 5 years due to back pain
       = image_tag "larry.jpg"
-.how-it-works
+%section.how-it-works
   .row
     .large-6.large-centered.small-left.text-center
       %h2 
         The 
         %em Risalto 
         Way Out
+  .row
     .large-4.text-center.columns
       %h3 Find
       = image_tag "icon-select.png"
@@ -43,15 +45,9 @@ title: Welcome to Risalto
       %h3 Guide
       = image_tag "icon-guide.png"
       %p We educate and guide patients through their care journey.
-.contact
+%section.contact
   .row
     .large-8.small-10.small-centered.large-centered.text-center
       %h3 Join us on the path to better, faster care
       Contact us at 
       %a{:href => "mailto:info@risaltohealth.com"} info@risaltohealth.com
-.footer
-  .row
-    .large-6.columns
-      Copyright &copy; Risalto Health, Inc. 
-      = Time.now.strftime("%Y")
-      All rights reserverd.
