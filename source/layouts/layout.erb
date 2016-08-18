@@ -16,6 +16,20 @@
   </head>
 
   <body class="<%= page_classes %>">
+    <div class="nav">
+      <div class="row">
+        <div class="large-6 large-text-left columns">
+          <% link_to '/' do %>
+            <%= image_tag "logo.png", width: '100' %>
+          <% end %>
+        </div>
+        <div class="large-6 columns large-text-right">
+          <ul>
+            <li><%= link_to 'Employers', '/employers' %>
+          </ul>
+        </div>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
