@@ -8,18 +8,32 @@ body {
 
   h1, h2 {
     margin-bottom: 4.5rem;
+    @media screen and (max-width: 39.9375em) {
+      margin-bottom: 0;
+    }
+
   }
 
   h1 {
     font-size: 2.5rem;
+    @media screen and (max-width: 39.9375em) {
+      font-size: 1.5rem;
+    }
   }
 
   h2 {
     font-size: 3rem;
+    @media screen and (max-width: 39.9375em) {
+      font-size: 1.75rem;
+    }
   }
 
   h3 {
     font-size: 2rem;
+    @media screen and (max-width: 39.9375em) {
+      font-size: 1.25rem;
+    }
+
   }
 
   ul {
@@ -31,6 +45,11 @@ body {
 .row {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  @media screen and (max-width: 39.9375em) {
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+    }
+
 }
 
 
@@ -47,12 +66,9 @@ body {
   }
 
   @media screen and (max-width: 39.9375em) {
-    font-size: 0.5em;
     height: 460px;
   }
-  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    font-size: 1.1em;
-  }
+
 
   .logo {  
     img {
@@ -86,13 +102,27 @@ body {
     font-weight: bold;
   }
 
-  .disability {font-size: .75rem; color: gray;}
-  h3 {margin-top: 1.75rem; margin-bottom: 1.75rem;}
-  li {padding-top: .75rem;}
+  .disability {
+    font-size: .75rem; 
+    color: gray;
+  }
+
+  h3 {
+    margin-top: 1.75rem; 
+    margin-bottom: 1.75rem;
+  }
+  
+  li {
+    padding-top: .75rem;
+  }
+  
   li.underline {
     border-bottom: 1px solid #e1e1e1; 
     padding-bottom: .75rem; 
     margin-right: 12rem;
+    @media screen and (max-width: 39.9375em) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -104,12 +134,23 @@ body {
     margin-left: 40px;
     margin-right: 40px;
   }
+  @media screen and (max-width: 39.9375em) {
+      h3 {
+        margin-top: 2rem;
+      }
+    }
+
 }
 
 .contact {
   font-size: 1.5rem;
   padding-top: 8rem;
   padding-bottom: 8rem;
+  @media screen and (max-width: 39.9375em) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   background-color: #f6f6f6;
 
 }
