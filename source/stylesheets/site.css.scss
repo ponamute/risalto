@@ -1,10 +1,14 @@
 @charset "utf-8";
 @import "normalize";
 
+$risalto-blue: #00A5ED;
+$risalto-text-gray: #4a4a4a;
+$risalto-bkgd-dark-blue: #004C6D;
+
 body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  color: #4a4a4a;
+  color: $risalto-text-gray;
 
   h1, h2 {
     margin-bottom: 4.5rem;
@@ -63,7 +67,7 @@ section {
   }
 
   h1 {
-    color: #4a4a4a;
+    color: $risalto-text-gray;
     margin-top: 3rem;
     @media screen and (max-width: 39.9375em) {
       margin-top: 0;
@@ -99,7 +103,7 @@ section {
 .broken {
 
   h2 {
-    color: #00A5ED;
+    color: $risalto-blue;
   }
 
   padding-bottom: 0;
@@ -126,7 +130,7 @@ section {
 }
 
 #employer-broken {
-  background-color: #004C6D;
+  background-color: $risalto-bkgd-dark-blue;
   color: white;
   padding-bottom: 4rem;
 
@@ -139,6 +143,20 @@ section {
   }
 
   p {
+    margin-bottom: 3rem;
+  }
+}
+
+#home-broken strong {
+  font-size: 1.5rem;
+  color: $risalto-blue;
+}
+
+#employer-how-it-works {
+  h2 {
+    margin-bottom: 2rem;
+  }
+  h3 {
     margin-bottom: 3rem;
   }
 }
@@ -173,7 +191,7 @@ section {
 }
 
 .footer {
-  background-color: #004C6D;
+  background-color: $risalto-bkgd-dark-blue;
   color: white;
 }
 
@@ -197,9 +215,9 @@ section {
 }
 
 li.underline {
+  display: inline;
   border-bottom: 1px solid #e1e1e1; 
   padding-bottom: .75rem; 
-  margin-right: 12rem;
   @media screen and (max-width: 39.9375em) {
     margin-right: 0;
   }
