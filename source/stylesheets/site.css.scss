@@ -62,13 +62,9 @@ section {
   background: url("../images/hero.jpg") no-repeat 68% 32%;
   background-size: cover;
 
-  .row {
-    padding-top: 2rem;
-  }
-
   h1 {
     color: $risalto-text-gray;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     @media screen and (max-width: 39.9375em) {
       margin-top: 0;
     }
